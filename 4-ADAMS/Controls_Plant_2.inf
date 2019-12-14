@@ -1,0 +1,23 @@
+D:\Appli\Adams\
+
+Controls_Plant_2
+Controls_Plant_2
+interactive
+discrete
+0.010000
+automatic
+no 
+NUMBER OF COMMANDS
+0
+NUMBER OF INPUTS/OUTPUTS
+2 4
+INPUT VARIABLES
+qd1 5 1
+qd2 6 1
+OUTPUT VARIABLES
+x 3 1
+y 4 1
+q1 1 1
+q2 2 1
+NUMBER OF STATES
+Adams/Controls Plant Export Error:  Failure to compute non-zero DOF for Dynamic States Output.  File is incomplete!

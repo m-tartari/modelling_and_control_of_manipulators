@@ -1,0 +1,6 @@
+! Adams/View Adams 2014 (built Aug 26 2014)
+! Graphics:  OpenGL
+! Using software OpenGL overlay plane emulation
+! Enter a command, '?', or 'help'.
+model display model=.SCARA_IRCCyN view=all
+! >> model display model=.SCARA_IRCCyN view=all

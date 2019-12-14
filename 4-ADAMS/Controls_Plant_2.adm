@@ -1,0 +1,328 @@
+ADAMS/View model name: SCARA_IRCCyN
+!
+!-------------------------------- SYSTEM UNITS ---------------------------------
+!
+UNITS/
+, FORCE = NEWTON
+, MASS = KILOGRAM
+, LENGTH = METER
+, TIME = SECOND
+!
+!----------------------------------- PARTS -------------------------------------
+!
+!----------------------------------- Ground ------------------------------------
+!
+!                            adams_view_name='ground'
+PART/1
+, GROUND
+!
+!                       adams_view_name='MARKER_Reference'
+MARKER/4
+, PART = 1
+!
+!                      adams_view_name='MARKER_Fix_Ground1'
+MARKER/15
+, PART = 1
+!
+!------------------------------------ Part -------------------------------------
+!
+!                             adams_view_name='Base'
+PART/2
+, MASS = 25.958
+, CM = 11
+, IM = 11
+, IP = 0.319, 0.319, 0.511
+!
+!                       adams_view_name='MARKER_Ori_Base'
+MARKER/1
+, PART = 2
+!
+!                      adams_view_name='MARKER_Axis_Motor1'
+MARKER/5
+, PART = 2
+, QP = 0, 0, 0.3
+!
+!                     adams_view_name='MARKER_Axis_Motor1_1'
+MARKER/8
+, PART = 2
+, QP = 0, 0, 0.3
+!
+!                        adams_view_name='MARKER_CM_Base'
+MARKER/11
+, PART = 2
+, QP = 0, 0, 0.12476
+!
+!                      adams_view_name='MARKER_Fix_Ground2'
+MARKER/14
+, PART = 2
+!
+!------------------------------------ Part -------------------------------------
+!
+!                             adams_view_name='Dist'
+PART/3
+, MASS = 8.305
+, CM = 13
+, IM = 13
+, IP = 0.044, 0.091, 0.057
+!
+!                       adams_view_name='MARKER_Ori_Dist'
+MARKER/3
+, PART = 3
+!
+!                     adams_view_name='MARKER_Axis_Motor2_2'
+MARKER/9
+, PART = 3
+, QP = 0.5, 0, 0.22
+!
+!                        adams_view_name='MARKER_CM_Dist'
+MARKER/13
+, PART = 3
+, QP = 0.529481, 0, 0.22
+!
+!                     adams_view_name='MARKER_end_effector'
+MARKER/16
+, PART = 3
+, QP = 0.8, 0, 0.22
+!
+!------------------------------------ Part -------------------------------------
+!
+!                             adams_view_name='Prox'
+PART/4
+, MASS = 24.146
+, CM = 12
+, IM = 12
+, IP = 0.323, 1.406, 1.246
+!
+!                       adams_view_name='MARKER_Ori_Prox'
+MARKER/2
+, PART = 4
+!
+!                      adams_view_name='MARKER_Axis_Motor2'
+MARKER/6
+, PART = 4
+, QP = 0.5, 0, 0.22
+!
+!                     adams_view_name='MARKER_Axis_Motor1_2'
+MARKER/7
+, PART = 4
+, QP = 0, 0, 0.3
+!
+!                     adams_view_name='MARKER_Axis_Motor2_1'
+MARKER/10
+, PART = 4
+, QP = 0.5, 0, 0.22
+!
+!                        adams_view_name='MARKER_CM_Prox'
+MARKER/12
+, PART = 4
+, QP = 0.144545, 0, 0.3
+!
+!-------------------------------- CONSTRAINTS ----------------------------------
+!
+!                         adams_view_name='JOINT_Motor1'
+JOINT/1
+, REVOLUTE
+, I = 7
+, J = 8
+!
+!                         adams_view_name='JOINT_Motor2'
+JOINT/2
+, REVOLUTE
+, I = 9
+, J = 10
+!
+!                       adams_view_name='JOINT_Fix_Ground'
+JOINT/3
+, FIXED
+, I = 14
+, J = 15
+!
+!                  adams_view_name='general_motion_1.motion_t1'
+!MOTION/1
+!, ACCELERATION
+!, ICDISP = 0
+!, ICVEL = 0
+!, I = 7
+!, J = 8
+!, X
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_1.motion_t2'
+!MOTION/2
+!, ACCELERATION
+!, ICDISP = 0
+!, ICVEL = 0
+!, I = 7
+!, J = 8
+!, Y
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_1.motion_t3'
+!MOTION/3
+!, ACCELERATION
+!, ICDISP = 0
+!, ICVEL = 0
+!, I = 7
+!, J = 8
+!, Z
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_1.motion_r1'
+!MOTION/4
+!, ACCELERATION
+!, ICDISP = 0D
+!, ICVEL = 0D
+!, I = 7
+!, J = 8
+!, B1
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_1.motion_r2'
+!MOTION/5
+!, ACCELERATION
+!, ICDISP = 0D
+!, ICVEL = 0D
+!, I = 7
+!, J = 8
+!, B2
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_1.motion_r3'
+MOTION/6
+, VELOCITY
+, ICDISP = 0D
+, I = 7
+, J = 8
+, B3
+, FUNCTION = VARVAL(5)
+!
+!                  adams_view_name='general_motion_2.motion_t1'
+!MOTION/7
+!, ACCELERATION
+!, ICDISP = 0
+!, ICVEL = 0
+!, I = 9
+!, J = 10
+!, X
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_2.motion_t2'
+!MOTION/8
+!, ACCELERATION
+!, ICDISP = 0
+!, ICVEL = 0
+!, I = 9
+!, J = 10
+!, Y
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_2.motion_t3'
+!MOTION/9
+!, ACCELERATION
+!, ICDISP = 0
+!, ICVEL = 0
+!, I = 9
+!, J = 10
+!, Z
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_2.motion_r1'
+!MOTION/10
+!, ACCELERATION
+!, ICDISP = 0D
+!, ICVEL = 0D
+!, I = 9
+!, J = 10
+!, B1
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_2.motion_r2'
+!MOTION/11
+!, ACCELERATION
+!, ICDISP = 0D
+!, ICVEL = 0D
+!, I = 9
+!, J = 10
+!, B2
+!, FUNCTION = 0 * time
+!
+!                  adams_view_name='general_motion_2.motion_r3'
+MOTION/12
+, VELOCITY
+, ICDISP = 0D
+, I = 9
+, J = 10
+, B3
+, FUNCTION = VARVAL(6)
+!
+!------------------------------ DATA STRUCTURES --------------------------------
+!
+!                              adams_view_name='q1'
+VARIABLE/1
+, IC = 0
+, FUNCTION = AZ(7, 8)
+!
+!                              adams_view_name='q2'
+VARIABLE/2
+, IC = 0
+, FUNCTION = AZ(9, 10)
+!
+!                              adams_view_name='x'
+VARIABLE/3
+, IC = 0
+, FUNCTION = DX(16, 4)
+!
+!                              adams_view_name='y'
+VARIABLE/4
+, IC = 0
+, FUNCTION = DY(16, 4)
+!
+!                             adams_view_name='qd1'
+VARIABLE/5
+, IC = 0
+, FUNCTION = 0
+!
+!                             adams_view_name='qd2'
+VARIABLE/6
+, IC = 0
+, FUNCTION = 0
+!
+!                           adams_view_name='PINPUT_1'
+PINPUT/1
+, VARIABLES = 5, 6
+!
+!                 adams_view_name='Controls_Plant_1.ctrl_pinput'
+PINPUT/2
+, VARIABLES = 1, 2
+!
+!                 adams_view_name='Controls_Plant_2.ctrl_pinput'
+PINPUT/3
+, VARIABLES = 5, 6
+!
+!                          adams_view_name='POUTPUT_1'
+POUTPUT/1
+, VARIABLES = 3, 4, 1, 2
+!
+!                adams_view_name='Controls_Plant_1.ctrl_poutput'
+POUTPUT/2
+, VARIABLES = 3, 4
+!
+!                adams_view_name='Controls_Plant_2.ctrl_poutput'
+POUTPUT/3
+, VARIABLES = 3, 4, 1, 2
+!
+!------------------------- GRAVITATIONAL ACCELERATION --------------------------
+!
+ACCGRAV/
+, KGRAV = -9.80665
+!
+!----------------------------- ANALYSIS SETTINGS -------------------------------
+!
+OUTPUT/
+, REQSAVE
+, GRSAVE
+!
+RESULTS/
+, XRF
+!
+END
